@@ -1,0 +1,30 @@
+﻿@model KorayCibikMvcProjectMap.UI.Models.Data
+
+@{
+    ViewBag.Title = "Koray Çıbık Web Uygulaması";
+}
+
+    <div class="menu">
+        <ul>
+            <li><a onclick="AddPoint()" href="#">Add Point</a></li>
+            <li><a onclick="ListDataViewBootstrapTable()" href="#">Query Point</a></li>
+        </ul>
+       
+    </div>
+<div id="map" onload="GetLocationPointFromData()" class="map"></div>
+
+<script>
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+        InitializeMap();
+
+        AddInteraction();
+
+        GetLocationPointFromData();
+    });
+
+</script>
+
